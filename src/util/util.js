@@ -1,5 +1,4 @@
 const { WebhookClient } = require('discord.js-selfbot-v13');
-const times = require('./times');
 
 function random(max) {
     return Math.floor(Math.random() * max);

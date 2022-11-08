@@ -16,6 +16,7 @@
 
 ## Planned features / TODO
 
+- [ ] Add Human like qualities to bypass bot detection
 - [ ] Trivia support
 - [ ] Adventure support
 - [ ] Multi-Account support
