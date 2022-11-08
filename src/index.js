@@ -25,7 +25,7 @@ client.on('messageCreate', async (message) => {
         }
         if(message.channel.type == 'DM') require('./handlers/DMHandler')(message);
         // Disabled temporarily for testing purposes to be enabled again later for prod
-        // if(client.lastAction == '') return;
+        if(client.lastAction == '') return;
         if(message.embeds.length == 0) return;
         await require('./handlers/messageHandler')(message, client.lastAction, client);
     } catch (error) {
@@ -36,7 +36,7 @@ client.on('messageCreate', async (message) => {
 client.on('ready', async () => {
     console.log(`${client.user.tag} is ready to farm`);
     const channel = await client.channels.fetch(client.config.channelId, { force: false });
-    // await startSimpleFarm(client, channel);
+    await startSimpleFarm(client, channel);
 
     setInterval(async () => {
         if (client.queue.length > 0) {

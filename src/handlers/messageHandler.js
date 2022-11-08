@@ -18,7 +18,7 @@ module.exports = async (message, action, client) => {
     else item = false;
 
     // For debugging purposes only, to be disabled in prod
-    action = 'highlow'
+    // action = ''
 
     switch(action.toLowerCase()) {
         case 'crime':
