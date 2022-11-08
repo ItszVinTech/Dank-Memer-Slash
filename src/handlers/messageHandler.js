@@ -18,13 +18,12 @@ module.exports = async (message, action, client) => {
     else item = false;
 
     // For debugging purposes only, to be disabled in prod
-    action = 'crime'
+    action = 'highlow'
 
     switch(action.toLowerCase()) {
         case 'crime':
             if(!len) break;
-            await message.clickButton(components[0].components[random(components[0].components.length)].customId)
-            return
+            return await message.clickButton(components[0].components[random(components[0].components.length)].customId)
             
         case 'postmemes':
             if(!len) break;
@@ -39,6 +38,13 @@ module.exports = async (message, action, client) => {
             // tested with 200ms latency
             await sleep(200)
             return await message.clickButton(message.components[2].components[0].customId)
+
+        case 'highlow':
+            const number = message.embeds[0].description.match(/\*\*(\d{1,3})\*\*/)[1]
+            let guess
+            if(number > 50) guess = 0
+            if(number <= 50) guess = 2 
+            return await message.clickButton(components[0].components[guess].customId)
 
         case '': break;
         

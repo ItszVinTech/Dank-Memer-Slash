@@ -41,6 +41,14 @@ async function startSimpleFarm(client, channel) {
         await sleep(5000);
     }, (second*50));
     await sleep(5000);
+    setInterval(async () => {
+        client.queue.push({
+            action: 'Highlow',
+            command: 'highlow'
+        });
+        await sleep(5000);
+    }, (second*30));
+    await sleep(5000)
     if(!client.config.safe) {
         setInterval(async () => {
             client.queue.push({
