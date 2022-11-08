@@ -15,7 +15,7 @@ async function startSimpleFarm(client, channel) {
             command: 'fish'
         });
         await sleep(5000);
-    }, (second*40));
+    }, (second*45));
     await sleep(5000);
     setInterval(async () => {
         client.queue.push({
@@ -23,7 +23,7 @@ async function startSimpleFarm(client, channel) {
             command: 'dig'
         });
         await sleep(5000);
-    }, (second*40));
+    }, (second*45));
     await sleep(5000);
     setInterval(async () => {
         client.queue.push({
@@ -31,7 +31,7 @@ async function startSimpleFarm(client, channel) {
             command: 'hunt'
         });
         await sleep(5000);
-    }, (second*40));
+    }, (second*45));
     await sleep(5000);
     setInterval(async () => {
         client.queue.push({
@@ -39,7 +39,7 @@ async function startSimpleFarm(client, channel) {
             command: 'postmemes'
         });
         await sleep(5000);
-    }, (second*50));
+    }, (second*45));
     await sleep(5000);
     setInterval(async () => {
         client.queue.push({
@@ -47,7 +47,7 @@ async function startSimpleFarm(client, channel) {
             command: 'highlow'
         });
         await sleep(5000);
-    }, (second*30));
+    }, (second*35));
     await sleep(5000)
     if(!client.config.safe) {
         setInterval(async () => {
@@ -56,7 +56,7 @@ async function startSimpleFarm(client, channel) {
                 command: 'crime'
             });
             await sleep(5000);
-        }, (second*45));
+        }, (second*50));
     }
 }
 

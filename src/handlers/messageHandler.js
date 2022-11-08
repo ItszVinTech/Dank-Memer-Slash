@@ -48,12 +48,12 @@ module.exports = async (message, action, client) => {
 
         case '': break;
         
-        default:
-            if(item) {
-                await message.channel.sendSlash('270904126974590976', 'sell', item);
-                await message.channel.sendSlash('270904126974590976', 'deposit', 'all');
-                break;
-            }
-            break;
+        // default:
+        //     if(item) {
+        //         await message.channel.sendSlash('270904126974590976', 'sell', item);
+        //         await message.channel.sendSlash('270904126974590976', 'deposit', 'all');
+        //         break;
+        //     }
+        //     break;
     }
 }
