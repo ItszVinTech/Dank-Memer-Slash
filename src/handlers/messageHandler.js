@@ -18,13 +18,13 @@ module.exports = async (message, action, client) => {
     else item = false;
 
     // For debugging purposes only, to be disabled in prod
-    action = 'postmemes'
+    action = 'crime'
 
     switch(action.toLowerCase()) {
         case 'crime':
             if(!len) break;
-            let customId = components[random(len)].customId;
-            return await message.clickButton(customId);
+            await message.clickButton(components[0].components[random(components[0].components.length)].customId)
+            return
             
         case 'postmemes':
             if(!len) break;
