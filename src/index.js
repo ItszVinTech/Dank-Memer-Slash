@@ -2,7 +2,7 @@ console.clear();
 
 const Client = require('./base/Client');
 const { startSimpleFarm } = require('./util/farm');
-const alert = require('./util/alert');
+const alert = require('./util/util').alert;
 let LastError = Date.now();
 
 const client = new Client();
@@ -19,7 +19,7 @@ client.on('messageCreate', async (message) => {
             if(message.embeds[0].description.includes('You have an ongoing command running.')) {
                 if(Date.now() < (LastError + 15000)) return;
                 const date = new Date().toLocaleTimeString();
-                await alert(`Somehow the bot didn't click a button at ${date}`, client.config.webhookURL);
+                await alert(`Somehow the bot didn't click a button at ${date}`);
                 return;
             }
         }

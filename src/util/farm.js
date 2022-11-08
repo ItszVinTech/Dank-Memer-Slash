@@ -1,6 +1,6 @@
 const { TextChannel } = require('discord.js-selfbot-v13')
 const Client = require('../base/Client');
-const { second, minute, hour, day } = require('./times');
+const { second, minute, hour, day } = require('../util/util').times;
 const { setTimeout: sleep } = require('node:timers/promises');
 
 /**
