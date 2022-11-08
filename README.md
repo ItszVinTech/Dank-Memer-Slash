@@ -20,3 +20,6 @@
 - [ ] Adventure support
 - [ ] Multi-Account support
 - [ ] Per account proxy 
+
+## Credits
+- Thanks to [TheDevYellowy/DankMemer-slash](https://github.com/TheDevYellowy/DankMemer-slash) for providing the code base for this project. They havent updated it in a few months so we decided to update it ourselves! 
